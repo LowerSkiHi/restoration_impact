@@ -86,9 +86,11 @@ svg{display:block;max-width:100%;height:auto;overflow:visible}
 .box.null{border-left:3px solid var(--noise)}
 .box.good{border-left:3px solid var(--moss)}
 
-.zones{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1px;background:var(--rule);
+.zones{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--rule);
   border:1px solid var(--rule);border-radius:3px;overflow:hidden;margin:2rem 0}
+@media (max-width:560px){.zones{grid-template-columns:1fr}}
 .zone{background:var(--card);padding:1.2rem 1.25rem}
+@media (min-width:600px){.zones{grid-template-columns:repeat(2,1fr)}}
 .zone .z{font-family:var(--serif);font-size:1.45rem;color:var(--signal);line-height:1;margin-bottom:.45rem}
 .zone h3{font-family:var(--sans);font-size:.85rem;font-weight:600;margin-bottom:.4rem;letter-spacing:0}
 .zone p{font-size:.82rem;color:var(--text-soft);margin:0;line-height:1.5}
@@ -97,7 +99,8 @@ svg{display:block;max-width:100%;height:auto;overflow:visible}
 .tag.fence{background:var(--moss-soft);color:#26402D}
 .tag.open{background:var(--signal-soft);color:#6B420E}
 
-.tri{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.5rem;margin:1.8rem 0 2.2rem}
+.tri{display:grid;grid-template-columns:1fr;gap:1.5rem;margin:1.8rem 0 2.2rem}
+@media (min-width:640px){.tri{grid-template-columns:repeat(3,1fr)}}
 .tri div{border-top:2px solid var(--signal);padding-top:.8rem}
 .tri h3{font-family:var(--mono);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;
   color:var(--text-faint);font-weight:500;margin-bottom:.5rem}
